@@ -1,6 +1,6 @@
 //Faça um Programa que peça dois números e imprima a soma.
 
-fun main(){
+fun main() {
 
     val num1: Float 
     val num2: Float
