@@ -18,11 +18,13 @@ fun main(){
     val litro_restante: Double
     val galao_restante: Double
     val preco_misto: Double
+    val areaComFolga: Double
 
     println("Informe a área a ser pintada: ")
     area = readLine()!!.toDouble()
 
-    litro_necessario = area/6
+    areaComFolga = area * 1.1
+    litro_necessario = areaComFolga/6
     lata = litro_necessario/18
     galao = litro_necessario/3.6
     custo_lata = lata*80
