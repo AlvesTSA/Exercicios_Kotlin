@@ -1,5 +1,5 @@
 # Exercicios_Kotlin
- ## Conhecendo e treinando kotlin
+ ## Conhecendo e treinando Kotlin
  
  ### Estrutura sequencial
  
