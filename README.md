@@ -1,4 +1,8 @@
 # Exercicios_Kotlin
+<div align="center">
+<img src="https://user-images.githubusercontent.com/116441568/233228023-a412de76-3cbd-4c94-873f-4e96c53486c7.png" width="100px" />
+</div>
+
  ## Conhecendo e treinando Kotlin
  
  ### Estrutura sequencial
