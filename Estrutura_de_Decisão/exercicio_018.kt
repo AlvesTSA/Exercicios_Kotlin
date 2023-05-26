@@ -4,16 +4,16 @@ fun main(){
 
     val num : Int
 
-        print("Informe um número inteiro: ")
-        num = readLine()!!.toInt()
+    print("Informe um número inteiro: ")
+    num = readLine()!!.toInt()
 
-        if (num % 2 == 0){
+    if (num % 2 == 0){
 
-            println("Número par")
-        }
-        else{
+        println("Número par")
+    }
+    else{
 
-           println("Número impar")
-        }
+        println("Número impar")
+    }
 
 }
