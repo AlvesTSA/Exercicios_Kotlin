@@ -1,74 +1,64 @@
 /*Faça um Programa que peça uma data no formato dd/mm/aaaa e determine se a mesma é uma data válida.*/
 
-import kotlin.system.exitProcess
-
 fun main(){
 
-    val num1 : Int
-    val num2 : Int
-    val resultado : Int
-    val op : Int
+    var dia = 0
+    var mes = 0
+    var ano = 0
+    var data = true
 
-    println("Informe dois números: ")
-    num1 = readLine()!!.toInt()
-    num2 = readLine()!!.toInt()
-    println("Escolha a operação\n\n[1]Adição\n[2]Subtração\n[3]Multiplicação\n[4]Divisão\n")
-    op = readLine()!!.toInt()
+    println("Informe uma data dd/mm/aaaa: ")
+    dia = readLine()!!.toInt()
+    mes = readLine()!!.toInt()
+    ano = readLine()!!.toInt()
 
-    when (op){
-
-     1 -> resultado = num1 + num2
-    
-     2 -> resultado = num1 - num2
-    
-     3 -> resultado = num1*num2
-
-     4 -> if(num2 == 0){
-
-            println("Não existe divisão por zero.")
-            
-            return
-
-        }
-        else{
-
-            resultado = num1/num2
-
-        }
-    
-    else -> {
-            println("Informe uma opção válida.")
+    if (ano < 0){
         
-            return
-        }
-         
+        data = false
+
     }
-    if(resultado % 2 == 0){
+    else if(mes <= 0 || mes > 12){
 
-        if(resultado > 0){
+        data = false
 
-            println("Resultado: $resultado é par e positivo.")
+    }
+    else if(dia <= 0 || dia > 31){
 
-        }
-        else if(resultado == 0){
+        data = false
 
-            println("Resultado: $resultado é par e neutro.")
+    }
+    else if((mes == 4 || mes == 6 || mes == 9 || mes == 11) && dia > 30){
 
+        data = false
+
+    }
+    else if(mes == 2){
+
+        if((ano % 4 == 0 && ano % 100 != 0) || (ano % 400 == 0)){
+
+            if(dia > 29){
+
+                data = false
+
+            }
         }
         else{
 
-            println("Resultado: $resultado é par e negativo.")
+            if(dia > 28){
+
+                data = false
+
+            }
         }
+    }
+    if(data){
+
+        println("Data: %02d/%02d/%04d".format(dia, mes, ano))
+        
+
     }
     else{
 
-        if(resultado < 0){
-
-            println("Resultado: $resultado é impar e negativo.")
-        }
-        else{
-
-            println("Resultado: $resultado é impar e positivo.")
-        }
-    } 
+        println("Data inválida! Tente novamente.")
+    }
 }
